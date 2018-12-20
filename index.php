@@ -7,7 +7,7 @@ require_once 'library/cart-functions.php';
 //เก็บค่า URL ก่อนที่จะมาหน้านี้เอาไว้ เพื่อที่จะได้ย้อนกลับไปได้
 $_SESSION['shop_return_url'] = $_SERVER['REQUEST_URI'];
 //ถ้ามีการส่งข้อความค้นหามา ก็จะใช้ค้นหาสินค้าจากข้อความนี้
-$searchTerm = (isset($_GET['plainCartSearch']))?mysql_real_escape_string($_GET['plainCartSearch']):'';
+$searchTerm = (isset($_GET['plainCartSearch']))?mysqli_real_escape_string($_GET['plainCartSearch']):'';
 $catId  = (isset($_GET['c']) && $_GET['c'] != '1') ? $_GET['c'] : 0;
 
 //หากมีการส่งรหัสสินค้ามา ก็จะนำมาใช้แสดงสินค้านั้นๆ

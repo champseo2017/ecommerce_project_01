@@ -8,8 +8,8 @@ session_start();
 
 // database connection config
 $dbHost = 'localhost';
-$dbUser = 'webmaster';
-$dbPass = 'pass';
+$dbUser = 'root';
+$dbPass = '';
 $dbName = 'itbookonline';
 
 // setting up the web root and server root for
